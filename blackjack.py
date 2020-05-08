@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # プログラミング的思考
 # TODO(deck)　トランプを作る：　得点を数えられるように数字
 # TODO(deal) トランプを2枚配る： 絵札(J,Q,K)で表示させる
@@ -78,6 +79,16 @@ def play_start():
             exit()
 
 
+def play_again():
+    again = input("もう１度プレイしますか？ (Y/N): ")
+    if again == "y" or again == "Y":
+        # game()
+        return
+    else:
+        print("お疲れ様でした！")
+        exit()
+
+
 def result(dealer_hand, player_hand):
     if total(player_hand) > total(dealer_hand):
         print(f'\nディーラーの合計は{total(dealer_hand)} あなたの合計は{total(player_hand)}です。 YOU WIN!')
@@ -86,9 +97,9 @@ def result(dealer_hand, player_hand):
 
 
 def game():
-    this_is_my_first_game = False
-    print('hirohiro2')
-    print(this_is_my_first_game)
+    # this_is_my_first_game = False
+    # print('hirohiro2')
+    # print(this_is_my_first_game)
     dealer_hand = deal()
     player_hand = deal()
     print(f'\nディーラーカードは{dealer_hand[0]}, * です。')
@@ -117,7 +128,6 @@ def game():
             if total(dealer_hand) <= 21:
                 result(dealer_hand, player_hand)
                 break
-    play_start()
 
 
 play_start()
