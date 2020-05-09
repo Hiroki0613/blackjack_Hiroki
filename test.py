@@ -75,7 +75,7 @@ def play_start():
         if again == 'y' or again == 'Y':
             game()
         else:
-            print('お疲れ様でした！')
+            print('お疲れ様でした！\nBlackJackを終了します！')
             exit()
 
 
