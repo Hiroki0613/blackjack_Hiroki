@@ -8,8 +8,8 @@
 #  hit(add_card)
 #  total(calc_value)
 #  is_blackjack()
-# * show()
-# TODO (class Game) ゲーム
+#  show()
+#  (class Game) ゲーム
 
 import random
 import time
