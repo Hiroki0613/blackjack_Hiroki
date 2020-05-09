@@ -69,6 +69,8 @@ def play_start():
     if this_is_my_first_game == True:
         print('\nブラックジャックをはじめます！')
         how_many_game_do_you_want_to_play = int(input('最初にゲームを行う回数を指定してください:'))
+        print('hirohiro')
+        print(type(how_many_game_do_you_want_to_play))
         game()
     else:
         again = input('\n\n\nもう一度プレイしますか? (Y/N):')
@@ -107,7 +109,7 @@ def game():
 
     choice = 0
 
-    for i in how_many_game_do_you_want_to_play:
+    for i in range(how_many_game_do_you_want_to_play + 1):
         print('ゲームスタート')
         print(f'{i}回目のゲームです。')
         choice = input('ヒットしますか? スタンドしますか? (HIT/STAND)：').lower()
@@ -127,6 +129,8 @@ def game():
 
             if total(dealer_hand) <= 21:
                 result(dealer_hand, player_hand)
+
+        play_start()
 
 
 play_start()
